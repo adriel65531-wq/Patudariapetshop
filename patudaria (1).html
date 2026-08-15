@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patudaria Pet Shop | Rua Bernardim Ribeiro 7A, Lisboa</title>
+  <meta name="description" content="Patudaria Pet Shop em Lisboa. Produtos de qualidade, banho e tosa, atendimento personalizado por Zé e Joana. Rua Bernardim Ribeiro 7A. 4,8★ no Google.">
+  <meta name="keywords" content="pet shop Lisboa, loja de animais Lisboa, banho e tosa, rações, Patudaria">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PetStore",
+    "name": "Patudaria Pet Shop",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Bernardim Ribeiro 7A",
+      "addressLocality": "Lisboa",
+      "postalCode": "1150-071",
+      "addressCountry": "PT"
+    },
+    "telephone": "+351963268111",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "104"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "10:00",
+        "closes": "13:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "16:00",
+        "closes": "19:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "10:00",
+        "closes": "13:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "16:00",
+        "closes": "20:00"
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #f7f3ee;
+      --bg-card: #ffffff;
+      --text: #2c2a26;
+      --text-soft: #5c574f;
+      --accent: #c4784a;
+      --accent-dark: #a05e35;
+      --accent-soft: #e8c4a8;
+      --green: #5a6b4e;
+      --green-soft: #e4ebe0;
+      --whatsapp: #25D366;
+      --whatsapp-dark: #1da851;
+      --border: #e5ddd3;
+      --shadow: 0 4px 20px rgba(44, 42, 38, 0.08);
+      --radius: 14px;
+      --font-title: 'Nunito', system-ui, sans-serif;
+      --font-body: 'Source Sans 3', system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button, .btn {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      border-radius: 999px;
+      font-weight: 600;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn:active { transform: translateY(0); }
+
+    .container {
+      width: min(1120px, 92%);
+      margin-inline: auto;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(247, 243, 238, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+      gap: 1rem;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-family: var(--font-title);
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+    .logo-paw {
+      width: 34px;
+      height: 34px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: white;
+      flex-shrink: 0;
+    }
+    .logo-paw svg { width: 18px; height: 18px; }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 0.15rem;
+    }
+    nav a {
+      padding: 0.45rem 0.7rem;
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--text-soft);
+      border-radius: 8px;
+      transition: color 0.15s, background 0.15s;
+    }
+    nav a:hover { color: var(--text); background: var(--accent-soft); }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .status {
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      background: var(--green-soft);
+      color: var(--green);
+      white-space: nowrap;
+    }
+    .status.closed {
+      background: #f0e4e0;
+      color: #8a4a3a;
+    }
+    .btn-call {
+      background: var(--accent);
+      color: white;
+      padding: 0.55rem 1.1rem;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(196, 120, 74, 0.3);
+    }
+    .btn-call:hover { background: var(--accent-dark); }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      padding: 0.4rem;
+      color: var(--text);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 3.5rem 0 4rem;
+      background: linear-gradient(165deg, #f7f3ee 0%, #efe6db 55%, #e8d9c8 100%);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+    .hero h1 {
+      font-family: var(--font-title);
+      font-size: clamp(2rem, 4.5vw, 2.85rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--text-soft);
+      margin-bottom: 1.4rem;
+      max-width: 34ch;
+    }
+    .rating-line {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1.6rem;
+      font-size: 0.95rem;
+      color: var(--text-soft);
+    }
+    .stars { color: #d4a017; letter-spacing: 1px; }
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+      padding: 0.85rem 1.5rem;
+      font-size: 1rem;
+      box-shadow: 0 3px 12px rgba(196, 120, 74, 0.28);
+    }
+    .btn-primary:hover { background: var(--accent-dark); }
+    .btn-secondary {
+      background: white;
+      color: var(--text);
+      padding: 0.85rem 1.5rem;
+      font-size: 1rem;
+      border: 1.5px solid var(--border);
+    }
+    .btn-secondary:hover { border-color: var(--accent); color: var(--accent-dark); }
+    .btn-whatsapp {
+      background: var(--whatsapp);
+      color: white;
+      padding: 0.85rem 1.5rem;
+      font-size: 1rem;
+      box-shadow: 0 3px 12px rgba(37, 211, 102, 0.3);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .btn-whatsapp:hover { background: var(--whatsapp-dark); }
+    .btn-whatsapp svg { width: 20px; height: 20px; }
+
+    .hero-visual {
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      aspect-ratio: 4/3;
+      display: grid;
+      place-items: center;
+      position: relative;
+      background: linear-gradient(145deg, #e8d9c8, #d4c0a8);
+    }
+    .hero-visual-inner {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-soft);
+    }
+    .hero-visual-inner svg { width: 72px; height: 72px; margin-bottom: 0.75rem; opacity: 0.7; }
+
+    /* Sections common */
+    section { padding: 4rem 0; }
+    .section-title {
+      font-family: var(--font-title);
+      font-size: clamp(1.55rem, 3vw, 1.9rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+    .section-lead {
+      color: var(--text-soft);
+      margin-bottom: 2rem;
+      max-width: 50ch;
+    }
+
+    /* Sobre */
+    .sobre {
+      background: var(--bg-card);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .sobre p { margin-bottom: 1rem; color: var(--text-soft); }
+    .sobre strong { color: var(--text); }
+    .values {
+      display: grid;
+      gap: 0.9rem;
+      margin-top: 1.5rem;
+    }
+    .value-item {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      padding: 0.9rem 1rem;
+      background: var(--bg);
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+    .value-item span {
+      width: 28px;
+      height: 28px;
+      background: var(--green-soft);
+      color: var(--green);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+      font-weight: 700;
+    }
+
+    /* Serviços */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+    .service-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.35rem;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    .service-card:hover {
+      box-shadow: var(--shadow);
+      border-color: var(--accent-soft);
+    }
+    .service-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--green-soft);
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 1rem;
+      color: var(--green);
+    }
+    .service-card h3 {
+      font-family: var(--font-title);
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+    .service-card p {
+      font-size: 0.92rem;
+      color: var(--text-soft);
+    }
+
+    /* Avaliações */
+    .rating-summary {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 2.2rem;
+      padding: 1.4rem 1.6rem;
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+    .rating-big {
+      text-align: center;
+    }
+    .rating-big .num {
+      font-family: var(--font-title);
+      font-size: 2.8rem;
+      font-weight: 800;
+      line-height: 1;
+      color: var(--text);
+    }
+    .rating-big .stars { font-size: 1.15rem; margin: 0.2rem 0; }
+    .rating-big .count { font-size: 0.9rem; color: var(--text-soft); }
+
+    .bars { flex: 1; min-width: 200px; max-width: 320px; }
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.82rem;
+      margin-bottom: 0.3rem;
+      color: var(--text-soft);
+    }
+    .bar-track {
+      flex: 1;
+      height: 7px;
+      background: #e8e0d6;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      background: #d4a017;
+      border-radius: 4px;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+    .review-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.4rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .review-meta {
+      font-size: 0.82rem;
+      color: var(--text-soft);
+      margin-bottom: 0.6rem;
+    }
+    .review-meta strong { color: var(--text); }
+    .review-text {
+      font-size: 0.95rem;
+      color: var(--text-soft);
+      flex: 1;
+      margin-bottom: 1rem;
+    }
+    .owner-reply {
+      background: var(--green-soft);
+      border-radius: 10px;
+      padding: 0.85rem 1rem;
+      font-size: 0.88rem;
+      color: var(--green);
+      border-left: 3px solid var(--green);
+    }
+    .owner-reply strong { display: block; margin-bottom: 0.2rem; }
+
+    .reviews-cta { margin-top: 1.8rem; text-align: center; }
+
+    /* Localização */
+    .local-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    .local-info p {
+      color: var(--text-soft);
+      margin-bottom: 1rem;
+    }
+    .local-info strong { color: var(--text); }
+    .local-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.2rem;
+    }
+    .map-wrap {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      height: 340px;
+      background: #e5ddd3;
+    }
+    .map-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    /* Contacto */
+    .contact-simple {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+    .contact-simple p {
+      margin-bottom: 0.6rem;
+      color: var(--text-soft);
+    }
+    .contact-simple a {
+      color: var(--accent-dark);
+      font-weight: 600;
+    }
+    .contact-simple a:hover { text-decoration: underline; }
+    .socials {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    .socials a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      display: grid;
+      place-items: center;
+      color: var(--text-soft);
+      transition: background 0.15s, color 0.15s;
+    }
+    .socials a:hover { background: var(--accent); color: white; border-color: var(--accent); }
+
+    /* Footer */
+    footer {
+      background: #2c2a26;
+      color: #c8c2b8;
+      padding: 2.8rem 0 1.8rem;
+      font-size: 0.9rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    .footer-logo {
+      font-family: var(--font-title);
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.8rem;
+    }
+    .footer-logo .logo-paw { width: 28px; height: 28px; }
+    .footer-logo .logo-paw svg { width: 14px; height: 14px; }
+    footer a { color: #c8c2b8; }
+    footer a:hover { color: white; }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 0.4rem; }
+    .footer-bottom {
+      border-top: 1px solid #44403a;
+      padding-top: 1.3rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 0.82rem;
+      color: #9a948a;
+    }
+
+    /* Mobile */
+    @media (max-width: 900px) {
+      .hero-grid,
+      .sobre-grid,
+      .local-grid { grid-template-columns: 1fr; }
+      .services-grid,
+      .reviews-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      nav { display: none; }
+      .menu-toggle { display: block; }
+      nav.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+        padding: 0.8rem 4%;
+        gap: 0.2rem;
+      }
+      .header-inner { position: relative; }
+      .status { display: none; }
+      .map-wrap { height: 280px; }
+    }
+    @media (max-width: 560px) {
+      .services-grid,
+      .reviews-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .hero { padding: 2.5rem 0 3rem; }
+      .header-actions .btn-call { padding: 0.5rem 0.9rem; font-size: 0.85rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <a href="#inicio" class="logo">
+        <span class="logo-paw" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-4.5-1c.8 0 1.5-.7 1.5-1.5S8.3 6 7.5 6 6 6.7 6 7.5 6.7 9 7.5 9zm9 0c.8 0 1.5-.7 1.5-1.5S17.3 6 16.5 6 15 6.7 15 7.5 15.7 9 16.5 9zM8.5 14c-.8 0-1.5.7-1.5 1.5S7.7 17 8.5 17s1.5-.7 1.5-1.5S9.3 14 8.5 14zm7 0c-.8 0-1.5.7-1.5 1.5s.7 1.5 1.5 1.5 1.5-.7 1.5-1.5-.7-1.5-1.5-1.5zM12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/></svg>
+        </span>
+        Patudaria
+      </a>
+      <nav id="nav">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="#localizacao">Localização</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <span class="status" id="status">A verificar...</span>
+        <a href="https://wa.me/351963268111" class="btn btn-call" target="_blank" rel="noopener">WhatsApp</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div>
+          <h1>O pet shop de bairro dos seus patudos</h1>
+          <p class="hero-sub">Produtos de qualidade e atendimento pessoal no centro de Lisboa. Cuidamos dos animais como se fossem nossos.</p>
+          <div class="rating-line">
+            <span class="stars">★★★★★</span>
+            <span><strong>4,8</strong> · 104 avaliações no Google</span>
+            <span>· Lisboa</span>
+          </div>
+          <div class="hero-ctas">
+            <a href="#localizacao" class="btn btn-primary">Ver localização</a>
+            <a href="https://wa.me/351963268111" class="btn btn-whatsapp" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-visual-inner">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-4.5-1c.8 0 1.5-.7 1.5-1.5S8.3 6 7.5 6 6 6.7 6 7.5 6.7 9 7.5 9zm9 0c.8 0 1.5-.7 1.5-1.5S17.3 6 16.5 6 15 6.7 15 7.5 15.7 9 16.5 9zM8.5 14c-.8 0-1.5.7-1.5 1.5S7.7 17 8.5 17s1.5-.7 1.5-1.5S9.3 14 8.5 14zm7 0c-.8 0-1.5.7-1.5 1.5s.7 1.5 1.5 1.5 1.5-.7 1.5-1.5-.7-1.5-1.5-1.5z"/></svg>
+            <p>Patudaria Pet Shop<br>Rua Bernardim Ribeiro 7A</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sobre" id="sobre">
+      <div class="container">
+        <h2 class="section-title">Sobre a Patudaria</h2>
+        <p class="section-lead">Uma loja de bairro, não uma cadeia.</p>
+        <div class="sobre-grid">
+          <div>
+            <p>A Patudaria nasceu da paixão pelos animais e da vontade de ter um espaço onde os donos fossem tratados com tempo e atenção.</p>
+            <p>Somos o <strong>Zé e a Joana</strong>. Conhecemos muitos dos clientes e dos seus cães e gatos pelo nome. Aqui o atendimento é feito por nós, não por turnos de funcionários desconhecidos.</p>
+            <p>O espaço é pequeno e acolhedor. Preferimos qualidade de produto e de relação a volume de vendas.</p>
+          </div>
+          <div class="values">
+            <div class="value-item">
+              <span>1</span>
+              <div><strong>Comunidade</strong><br>Fazemos parte do bairro. Muitos clientes passam todos os dias.</div>
+            </div>
+            <div class="value-item">
+              <span>2</span>
+              <div><strong>Cuidado individual</strong><br>Cada animal tem necessidades diferentes. Aconselhamos com base no que conhecemos.</div>
+            </div>
+            <div class="value-item">
+              <span>3</span>
+              <div><strong>Proximidade</strong><br>Pode ligar, passar ou mandar mensagem. Respondemos nós.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos">
+      <div class="container">
+        <h2 class="section-title">Serviços</h2>
+        <p class="section-lead">O essencial para o dia a dia dos seus animais.</p>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6l2.1 2.1M5.6 18.4l2.1-2.1m8.6-8.6l2.1-2.1"/></svg>
+            </div>
+            <h3>Banho e Tosa</h3>
+            <p>Por marcação. Tratamos o animal com calma e atenção ao temperamento de cada um.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 9.5c0 4.5-3.5 8.2-8 9.5-4.5-1.3-8-5-8-9.5 0-2.5 2-4.5 4.5-4.5 1.5 0 2.8.7 3.5 1.8.7-1.1 2-1.8 3.5-1.8 2.5 0 4.5 2 4.5 4.5z"/></svg>
+            </div>
+            <h3>Bem-estar Animal</h3>
+            <p>Conselhos sobre alimentação, higiene e rotina. Ajudamos a escolher o que faz sentido para o seu caso.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg>
+            </div>
+            <h3>Produtos e Rações</h3>
+            <p>Seleção cuidada de alimentação, snacks, higiene e acessórios. Marcas de qualidade, sem excesso de opções.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12v10H4V12M2 7h20v5H2zM12 22V7M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>
+            </div>
+            <h3>Presentes para Pets</h3>
+            <p>Brinquedos, coleiras, camas e pequenos mimos. Úteis e bem feitos.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h3>Retirada na Loja</h3>
+            <p>Encomende o que precisa e passe a buscar quando for conveniente.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <h3>Entrega ao Domicílio</h3>
+            <p>Para quem prefere receber em casa. Fale connosco para combinar.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="avaliacoes">
+      <div class="container">
+        <h2 class="section-title">Avaliações</h2>
+        <p class="section-lead">O que dizem quem já cá veio.</p>
+
+        <div class="rating-summary">
+          <div class="rating-big">
+            <div class="num">4,8</div>
+            <div class="stars">★★★★★</div>
+            <div class="count">104 avaliações no Google</div>
+          </div>
+          <div class="bars">
+            <div class="bar-row"><span>5</span><div class="bar-track"><div class="bar-fill" style="width:82%"></div></div></div>
+            <div class="bar-row"><span>4</span><div class="bar-track"><div class="bar-fill" style="width:12%"></div></div></div>
+            <div class="bar-row"><span>3</span><div class="bar-track"><div class="bar-fill" style="width:4%"></div></div></div>
+            <div class="bar-row"><span>2</span><div class="bar-track"><div class="bar-fill" style="width:1%"></div></div></div>
+            <div class="bar-row"><span>1</span><div class="bar-track"><div class="bar-fill" style="width:1%"></div></div></div>
+          </div>
+        </div>
+
+        <div class="reviews-grid">
+          <article class="review-card">
+            <div class="review-meta"><strong>Local Guide</strong> · 5★</div>
+            <p class="review-text">Grande variedade de produtos de excelente qualidade. O atendimento dos proprietários é exemplar — simpatia, profissionalismo e dedicação.</p>
+            <div class="owner-reply">
+              <strong>Resposta da Patudaria</strong>
+              Obrigado. É para isso que cá estamos. Até breve.
+            </div>
+          </article>
+          <article class="review-card">
+            <div class="review-meta"><strong>Cliente do bairro</strong> · 5★</div>
+            <p class="review-text">A loja do Zé e da Joana. Mais uma extensão do bairro do que uma loja comum. Ambiente acolhedor e atenção aos detalhes.</p>
+            <div class="owner-reply">
+              <strong>Resposta da Patudaria</strong>
+              Ficamos contentes que se sinta em casa. O bairro também é nosso.
+            </div>
+          </article>
+          <article class="review-card">
+            <div class="review-meta"><strong>Cliente</strong> · 5★</div>
+            <p class="review-text">Ajudaram-me numa situação complicada com o embarque do animal. Cuidado extra da equipa. Recomendo.</p>
+            <div class="owner-reply">
+              <strong>Resposta da Patudaria</strong>
+              Quando precisamos, tentamos estar presentes. Obrigado pela confiança.
+            </div>
+          </article>
+        </div>
+
+        <div class="reviews-cta">
+          <a href="https://www.google.com/search?q=Patudaria+Pet+Shop+Lisboa" target="_blank" rel="noopener" class="btn btn-secondary">Ver todas as avaliações no Google</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="localizacao" style="background:var(--bg-card);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+      <div class="container">
+        <h2 class="section-title">Localização</h2>
+        <div class="local-grid">
+          <div class="local-info">
+            <p><strong>Rua Bernardim Ribeiro 7A</strong><br>1150-071 Lisboa</p>
+            <p>Segunda a Sexta: 10:00–13:00 e 16:00–19:30<br>Sábado: 10:00–13:00 e 16:00–20:00<br>Domingo: Encerrado</p>
+            <div class="local-actions">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=Rua+Bernardim+Ribeiro+7A,+1150-071+Lisboa" target="_blank" rel="noopener" class="btn btn-primary">Como chegar</a>
+              <a href="https://wa.me/351963268111" class="btn btn-whatsapp" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp
+              </a>
+            </div>
+          </div>
+          <div class="map-wrap">
+            <iframe
+              src="https://maps.google.com/maps?q=Rua+Bernardim+Ribeiro+7A,+1150-071+Lisboa&t=m&z=17&ie=UTF8&iwloc=&output=embed"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Mapa - Patudaria Pet Shop">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <div class="container">
+        <h2 class="section-title">Contacto</h2>
+        <div class="contact-simple">
+          <div>
+            <p><strong>Telefone</strong><br><a href="tel:+351963268111">+351 963 268 111</a></p>
+            <p><strong>WhatsApp</strong><br><a href="https://wa.me/351963268111" target="_blank" rel="noopener">Enviar mensagem</a></p>
+            <p><strong>Morada</strong><br>Rua Bernardim Ribeiro 7A<br>1150-071 Lisboa</p>
+            <div class="socials">
+              <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+                <svg width="18" height="18" fill="currentColor"><path d="M18 0H2C.9 0 0 .9 0 2v16c0 1.1.9 2 2 2h8.6v-7H8.2V9.5h2.4V7.4c0-2.4 1.5-3.7 3.6-3.7 1 0 1.9.1 2.2.1v2.5h-1.5c-1.2 0-1.4.6-1.4 1.4v1.8h2.8l-.4 2.5h-2.4V20H18c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div>
+            <a href="https://wa.me/351963268111" class="btn btn-whatsapp" target="_blank" rel="noopener" style="padding:1rem 1.8rem;font-size:1.05rem">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Falar no WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">
+            <span class="logo-paw" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-4.5-1c.8 0 1.5-.7 1.5-1.5S8.3 6 7.5 6 6 6.7 6 7.5 6.7 9 7.5 9zm9 0c.8 0 1.5-.7 1.5-1.5S17.3 6 16.5 6 15 6.7 15 7.5 15.7 9 16.5 9zM8.5 14c-.8 0-1.5.7-1.5 1.5S7.7 17 8.5 17s1.5-.7 1.5-1.5S9.3 14 8.5 14zm7 0c-.8 0-1.5.7-1.5 1.5s.7 1.5 1.5 1.5 1.5-.7 1.5-1.5-.7-1.5-1.5-1.5z"/></svg>
+            </span>
+            Patudaria Pet Shop
+          </div>
+          <p>Rua Bernardim Ribeiro 7A<br>1150-071 Lisboa</p>
+          <p style="margin-top:0.5rem"><a href="tel:+351963268111">+351 963 268 111</a></p>
+        </div>
+        <div>
+          <strong style="color:white;display:block;margin-bottom:0.6rem">Links</strong>
+          <ul class="footer-links">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#avaliacoes">Avaliações</a></li>
+            <li><a href="#localizacao">Localização</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <strong style="color:white;display:block;margin-bottom:0.6rem">Contacto rápido</strong>
+          <p><a href="https://wa.me/351963268111" target="_blank" rel="noopener">WhatsApp</a></p>
+          <p style="margin-top:0.4rem"><a href="tel:+351963268111">Ligar</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Patudaria Pet Shop</span>
+        <span>Lisboa</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('nav');
+    toggle.addEventListener('click', () => nav.classList.toggle('open'));
+
+    function updateStatus() {
+      const el = document.getElementById('status');
+      const now = new Date();
+      const day = now.getDay();
+      const h = now.getHours();
+      const m = now.getMinutes();
+      const mins = h * 60 + m;
+
+      let open = false;
+      let closeText = '';
+
+      if (day >= 1 && day <= 5) {
+        if ((mins >= 10*60 && mins < 13*60) || (mins >= 16*60 && mins < 19*60+30)) {
+          open = true;
+          closeText = mins < 13*60 ? 'Fecha às 13:00' : 'Fecha às 19:30';
+        }
+      } else if (day === 6) {
+        if ((mins >= 10*60 && mins < 13*60) || (mins >= 16*60 && mins < 20*60)) {
+          open = true;
+          closeText = mins < 13*60 ? 'Fecha às 13:00' : 'Fecha às 20:00';
+        }
+      }
+
+      if (open) {
+        el.textContent = 'Aberto agora · ' + closeText;
+        el.classList.remove('closed');
+      } else {
+        el.textContent = 'Fechado agora';
+        el.classList.add('closed');
+      }
+    }
+    updateStatus();
+    setInterval(updateStatus, 60000);
+
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+  </script>
+</body>
+</html>
